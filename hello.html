@@ -1,10 +1,111 @@
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <title>helloword</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Привет, мир! 🌍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      animation: fadeInUp 1s ease;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #ff9a9e, #fecfef);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: linear-gradient(to right, #ff6b6b, #ee5a24);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello Word!!!!!!</h1>
-    Я учусь работать с Git
+  <div class="container">
+    <h1>Добро пожаловать! 🌸</h1>
+    <p>
+      Это красивая, современная веб-страница, созданная специально для тебя.
+      Лёгкая анимация, градиенты, стеклянный эффект — всё для вдохновения!
+    </p>
+    <button onclick="this.textContent = 'Спасибо! 🎉'">Нажми меня</button>
+    <footer>Сделано с ❤️ для начинающих веб-разработчиков</footer>
+  </div>
+
+  <script>
+    // Простая анимация при загрузке
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector(".container");
+      container.style.opacity = "0";
+      container.style.transform = "translateY(20px)";
+      setTimeout(() => {
+        container.style.transition = "opacity 0.8s, transform 0.8s";
+        container.style.opacity = "1";
+        container.style.transform = "translateY(0)";
+      }, 300);
+    });
+  </script>
 </body>
 </html>
