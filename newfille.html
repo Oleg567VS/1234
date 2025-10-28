@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <style>
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            display: none; /* изначально скрыто */
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать!</h1>
+    <button onclick="showMessage()">Показать сообщение</button>
+    <div id="message">Привет! Это главная страница</div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
